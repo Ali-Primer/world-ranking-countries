@@ -12,6 +12,7 @@
 
 html, body{
   font-size: 10px;
+  width: 100vw;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -97,4 +98,63 @@ html, body{
   font-size: var(--bold_medium-normal);
   color: var(--light-gray);
   font-weight: 600;
+}
+
+.page_main{
+  padding: 1.5rem;
+}
+
+.sub_sort{
+  font-size: var(--bold_medium-small);
+  color: var(--light-gray);
+  font-weight: 600;
+}
+
+.sort_box{
+  position: relative;
+}
+
+.box_selected{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--dark-gray);
+  border-radius: 1rem;
+  padding: 0 1rem;
+  color: var(--white);
+  background: var(--black);
+  width: 94%;
+  font-size: var(--bold_medium-normal);
+  position: absolute;
+  z-index: 3;
+  top: 1px;
+}
+
+.box_options{
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  height: 10rem;
+  padding-top: 5rem;
+  row-gap: 0.2rem;
+}
+
+.box_options button{
+  background: transparent;  
+  border: 0;
+  border-bottom: var(--light-gray) 1px solid;
+  border-radius: 1rem; 
+  outline: none;
+  text-align: left;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-size: var(--bold_medium-normal);
+  transition: 0.5s;
+  padding: 1rem;
+}
+
+.box_options button:hover{
+  background: var(--dark-gray);
+  cursor: pointer;
+  transition: 0.5s;
 }
