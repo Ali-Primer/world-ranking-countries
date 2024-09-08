@@ -1,0 +1,29 @@
+.sub_region {
+    font-size: var(--bold_medium-small);
+    color: var(--light-gray);
+    font-weight: 600;
+    margin-top: 7rem;
+}
+
+.region_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.region {
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.region:hover {
+    background: var(--dark-gray);
+    color: var(--white);
+}
+
+.region.selected{
+    background: var(--dark-gray);
+    color: var(--white);
+}
