@@ -1,17 +1,30 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { RegionSelect } from "./components/RegionSelect";
+import { Status } from "./components/Status";
 
 export default function Home() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("Population");
   const [drop, setDrop] = useState(false);
   const [regions, setRegions] = useState([])
+  const [unMember, setUnMember] = useState(false);
+  const [independent, setIndependent] = useState(false);
   const dropdownRef = useRef(null); // Ref for the dropdown element
 
   const handleRegionChange = (selectedRegions) =>{
     setRegions(selectedRegions)
     console.log("Regions: ", regions);
+  }
+
+  const handleUnMember = (membership) => {
+    setUnMember(membership)
+    console.log("UnMember: ", unMember);
+  }
+
+  const handleIndependent = (dependency) => {
+    setIndependent(dependency)
+    console.log("independent: ", independent);
   }
 
   const handleClickOutside = (event) => {
@@ -78,6 +91,7 @@ export default function Home() {
               </div>
             </div>
             <RegionSelect onRegionChange={handleRegionChange}/>
+            <Status onIndependent={handleIndependent} onUnMember={handleUnMember}/>
           </div>
           <div className="main"></div>
         </div>

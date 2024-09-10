@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    font-size: var(--semi-bold_medium-big);
 }
 
 .region {
