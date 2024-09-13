@@ -1,0 +1,21 @@
+.countries_country{
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--semi-bold_medium-big);
+    color: var(--white);
+}
+
+.country_img{
+    width: 10%; 
+}
+
+.country_img img{
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.country_name{
+    width: 15%;
+}

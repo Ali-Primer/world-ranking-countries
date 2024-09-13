@@ -2,6 +2,7 @@
     font-size: var(--bold_medium-small);
     color: var(--light-gray);
     font-weight: 600;
+    margin-top: 3rem;
 }
 
 .status_checkboxes {
@@ -13,8 +14,8 @@
 .checkboxes_checkbox {
     display: flex;
     align-items: center;
-    font-size: var(--semi-bold_medium-big);
     color: var(--white);
+    font-weight: 500;
     gap: 0.5rem;
     height: 3rem;
     cursor: pointer;
