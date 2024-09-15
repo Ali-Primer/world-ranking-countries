@@ -1,4 +1,4 @@
-:root{
+:root {
   --black: #1B1D1F;
   --dark-gray: #282B30;
   --blue: #4E80EE;
@@ -10,7 +10,8 @@
   --bold_medium-small: 1.2rem;
 }
 
-html, body{
+html,
+body {
   font-size: 10px;
   width: 100vw;
   margin: 0;
@@ -20,15 +21,15 @@ html, body{
   overflow-x: hidden;
 }
 
-.background{
+.background {
   width: 100vw;
   height: 20vh;
   background: black;
   display: flex;
   justify-content: center;
-}  
+}
 
-.background_logo{
+.background_logo {
   height: 100%;
   width: 100%;
   background: url(../../public/hero-image-wr.jpg);
@@ -39,20 +40,20 @@ html, body{
   align-items: center;
 }
 
-.background_logo img{
+.background_logo img {
   width: 15rem;
 }
 
-.lowerBackground{
+.lowerBackground {
   background: var(--black);
   height: 80vh;
 }
 
-.bc_box{
+.bc_box {
   position: relative;
 }
 
-.main_page{
+.main_page {
   width: 100%;
   background: var(--black);
   position: absolute;
@@ -60,20 +61,20 @@ html, body{
   z-index: 2;
 }
 
-.header_found{
+.header_found {
   color: var(--light-gray);
   font-size: var(--bold_medium-normal);
   font-weight: 700;
 }
 
-.page_header{
+.page_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
 }
 
-.header_search{
+.header_search {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,11 +85,11 @@ html, body{
   border-radius: 1rem;
 }
 
-.header_search img{
+.header_search img {
   display: block;
 }
 
-.searchBox{
+.searchBox {
   background: transparent;
   border: 0;
   outline: none;
@@ -98,21 +99,21 @@ html, body{
   font-weight: 600;
 }
 
-.page_main{
+.page_main {
   padding: 1.5rem;
 }
 
-.sub_sort{
+.sub_sort {
   font-size: var(--bold_medium-small);
   color: var(--light-gray);
   font-weight: 600;
 }
 
-.sort_box{
+.sort_box {
   position: relative;
 }
 
-.box_selected{
+.box_selected {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,7 +129,7 @@ html, body{
   top: 1px;
 }
 
-.box_options{
+.box_options {
   display: flex;
   flex-direction: column;
   background: var(--black);
@@ -137,11 +138,11 @@ html, body{
   row-gap: 0.2rem;
 }
 
-.box_options button{
-  background: transparent;  
+.box_options button {
+  background: transparent;
   border: 0;
   border-bottom: var(--light-gray) 1px solid;
-  border-radius: 1rem; 
+  border-radius: 1rem;
   outline: none;
   text-align: left;
   color: var(--white);
@@ -151,13 +152,13 @@ html, body{
   padding: 1rem;
 }
 
-.box_options button:hover{
+.box_options button:hover {
   background: var(--dark-gray);
   cursor: pointer;
   transition: 0.5s;
 }
 
-.main_header{
+.main_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +170,7 @@ html, body{
   margin-top: 5rem;
 }
 
-.loading-block{
+.loading-block {
   width: 100%;
   background: #282b3080;
   display: flex;
@@ -180,7 +181,44 @@ html, body{
   height: 100vh;
 }
 
-.loading-none{
+.loading-none {
   display: none;
   transform: 0.5s;
+}
+
+@media screen and (min-width:1023px) {
+  .page_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main_sub {
+    width: 25%;
+    margin-top: 6rem;
+  }
+
+  .main {
+    width: 70%;
+  }
+
+  .background{
+    height: 40vh;
+  }
+
+  .main_page{
+    top: 20rem;
+    width: 95%;
+    left: 2.5rem;
+    border-radius: 1.6rem;
+    border: 1px solid var(--dark-gray);
+  }
+
+  .header_search{
+    width: 30rem;
+  }
+
+  .searchBox{
+    width: 25rem;
+  }
 }

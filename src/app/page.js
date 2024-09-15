@@ -116,6 +116,30 @@ export default function Home() {
     setDrop(false);
   };
 
+  const addCommos = (number) => {
+    return number.toLocaleString()
+  }
+
+  useEffect(() => {
+    const lowerBackground = document.querySelector('.lowerBackground');
+    const mainPage = document.querySelector('.main_page');
+  
+    if (mainPage && lowerBackground) {
+      lowerBackground.style.height = `${mainPage.offsetHeight}px`;
+    }
+  
+    // Adjust on window resize
+    window.addEventListener('resize', () => {
+      if (mainPage && lowerBackground) {
+        lowerBackground.style.height = `${mainPage.offsetHeight}px`;
+      }
+    });
+  
+    return () => {
+      window.removeEventListener('resize', () => {});
+    };
+  }, [countries]);
+
   return (
     <>
       <div className="bc_box">
@@ -197,8 +221,8 @@ export default function Home() {
                 <CountriesList
                   key={country.cca3}
                   name={country.name.common}
-                  population={country.population}
-                  area={country.area}
+                  population={addCommos(country.population)}
+                  area={addCommos(country.area)}
                   flag={country.flags.svg}
                 />
               ))}
