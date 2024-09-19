@@ -220,6 +220,7 @@ export default function Home() {
               {countries.map((country) => (
                 <CountriesList
                   key={country.cca3}
+                  id={country.cca3}
                   name={country.name.common}
                   population={addCommos(country.population)}
                   area={addCommos(country.area)}

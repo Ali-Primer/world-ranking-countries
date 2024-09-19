@@ -1,0 +1,169 @@
+html,
+body {
+  font-size: 10px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  overflow-x: hidden;
+}
+
+.background {
+  width: 100vw;
+  height: 20vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+.background_logo {
+  height: 100%;
+  width: 100%;
+  background: url(../../../public/hero-image-wr.jpg);
+  background-position-x: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.background_logo img {
+  width: 15rem;
+}
+
+.lowerBackground {
+  background: var(--black);
+  position: relative;
+  /* Maintain relative positioning */
+  z-index: 1;
+  /* Lowest z-index to sit behind other elements */
+  height: 80vh;
+}
+
+.bc_box {
+  position: relative;
+}
+
+.main_page {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: var(--black);
+  top: -50rem;
+  height: 100rem;
+}
+
+.page_flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 10rem;
+  position: absolute;
+  top: -2rem;
+  left: 106px;
+  z-index: 3;
+}
+
+.page_flag img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.page_names {
+  margin-top: 15rem;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.names_common {
+  font-size: var(--semi-bold-bigger);
+  font-weight: 700;
+}
+
+.names_official {
+  font-size: var(--bold_medium-normal);
+  font-weight: 600;
+}
+
+.page_boxes {
+  display: flex;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 23rem;
+}
+
+.boxes_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--white);
+  font-size: var(--bold_medium-small);
+  font-weight: 600;
+  background: var(--dark-gray);
+  padding: 1.2rem 1.2rem;
+  border-radius: 0.8rem;
+}
+
+.first_box {
+  width: 40%;
+}
+
+.second_box {
+  width: 35%;
+}
+
+.box_text,
+.box_value {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+.vertical {
+  border-left: 1px solid var(--white);
+  height: 2rem;
+}
+
+.page_parts {
+  position: absolute;
+  margin-top: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: var(--bold_medium-small);
+  color: var(--light-gray);
+  font-weight: 600;
+}
+
+.part_border {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.parts_part {
+  border-top: 1px solid var(--dark-gray);
+  width: 100%;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1023px) {
+  .background {
+    height: 40vh;
+  }
+}
