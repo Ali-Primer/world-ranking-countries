@@ -7,6 +7,7 @@ body {
   box-sizing: border-box;
   font-family: 'Be Vietnam Pro', sans-serif;
   overflow-x: hidden;
+  height: auto;
 }
 
 .background {
@@ -160,6 +161,20 @@ body {
   border-top: 1px solid var(--dark-gray);
   width: 100%;
   padding: 2rem 0;
+}
+
+.part_info{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.part_border2{
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
 }
 
 @media screen and (min-width: 1023px) {

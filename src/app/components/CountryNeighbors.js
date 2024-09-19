@@ -9,7 +9,7 @@ export const CountryNeighbors = ({name, flag}) => {
                         <img src={flag.svg} alt={flag.alt}/>
                     </div>
                     <div className="box_name">
-                        ali
+                        {name}
                     </div>
                 </div>
             </div>
