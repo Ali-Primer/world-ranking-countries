@@ -164,8 +164,8 @@ body {
 }
 
 .part_info{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   row-gap: 3rem;
   flex-wrap: wrap;
   padding: 2rem;
@@ -180,5 +180,20 @@ body {
 @media screen and (min-width: 1023px) {
   .background {
     height: 40vh;
+  }
+
+  .main_page{
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .page_flag{
+    width: 30%;
+    left: 240px;
+  }
+
+  .part_info{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
   }
 }
