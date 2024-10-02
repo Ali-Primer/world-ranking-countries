@@ -114,19 +114,19 @@ export default function Country({ params }) {
             <div className="parts_part">
               <div className="part_border">
                 <div className="part_sub">Capital</div>
-                <div className="part_info">{country.capital[0]}</div>
+                <div className="part_info2">{country.capital[0]}</div>
               </div>
             </div>
             <div className="parts_part">
               <div className="part_border">
                 <div className="part_sub">Subregion</div>
-                <div className="part_info">{country.subregion}</div>
+                <div className="part_info2">{country.subregion}</div>
               </div>
             </div>
             <div className="parts_part">
               <div className="part_border">
                 <div className="part_sub">Language</div>
-                <div className="part_info">
+                <div className="part_info2">
                   {Object.values(country.languages).join(", ")}
                 </div>
               </div>
@@ -134,7 +134,7 @@ export default function Country({ params }) {
             <div className="parts_part">
               <div className="part_border">
                 <div className="part_sub">Currencies</div>
-                <div className="part_info">
+                <div className="part_info2">
                   {Object.values(country.currencies)[0].name}
                 </div>
               </div>
@@ -142,14 +142,11 @@ export default function Country({ params }) {
             <div className="parts_part">
               <div className="part_border">
                 <div className="part_sub">Continents</div>
-                <div className="part_info">{country.continents[0]}</div>
+                <div className="part_info2">{country.continents[0]}</div>
               </div>
             </div>
-            <div
-              className="parts_part"
-              style={{ borderBottom: "1px solid #282B30" }}
-            >
-              <div className="part_border2" style={{flexDirection: "column"}}>
+            <div className="parts_part">
+              <div className="part_border2" style={{ flexDirection: "column" }}>
                 <div className="part_sub">Neighbouring Countries</div>
                 <div className="part_info">
                   {flags &&

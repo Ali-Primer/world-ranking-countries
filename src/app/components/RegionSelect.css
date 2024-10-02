@@ -28,3 +28,7 @@
     background: var(--dark-gray);
     color: var(--white);
 }
+
+.box_flag{
+    width: 4rem;
+}

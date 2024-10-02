@@ -8,12 +8,13 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
   overflow-x: hidden;
   height: auto;
+  background: var(--black);
 }
 
 .background {
   width: 100vw;
   height: 20vh;
-  background: black;
+  background: var(--black);
   display: flex;
   justify-content: center;
 }
@@ -35,12 +36,14 @@ body {
 }
 
 .lowerBackground {
+  background: transparent;
   background: var(--black);
   position: relative;
   /* Maintain relative positioning */
   z-index: 1;
   /* Lowest z-index to sit behind other elements */
-  height: 80vh;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .bc_box {
@@ -52,8 +55,13 @@ body {
   z-index: 2;
   width: 100%;
   background: var(--black);
-  top: -50rem;
-  height: 100rem;
+  top: -66rem;
+  /* این مقدار می‌تواند حذف یا تغییر کند تا با محتوا همخوانی داشته باشد */
+  height: auto;
+  /* اجازه بده تا ارتفاع به طور خودکار با محتوای داخل تنظیم شود */
+  padding-bottom: 2rem;
+  /* مقداری فاصله برای انتهای صفحه ایجاد می‌کند */
+  box-shadow: 0px 10px 50px 4px var(--black);
 }
 
 .page_flag {
@@ -63,7 +71,7 @@ body {
   width: 50%;
   height: 10rem;
   position: absolute;
-  top: -2rem;
+  top: -30rem;
   left: 106px;
   z-index: 3;
 }
@@ -74,7 +82,7 @@ body {
 }
 
 .page_names {
-  margin-top: 15rem;
+  margin-top: -17rem;
   width: 100%;
   position: absolute;
   display: flex;
@@ -100,7 +108,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  margin-top: 23rem;
+  margin-top: -8rem;
 }
 
 .boxes_box {
@@ -138,7 +146,8 @@ body {
 }
 
 .page_parts {
-  position: absolute;
+  position: relative;
+  /* از absolute به relative تغییر کن */
   margin-top: 31rem;
   display: flex;
   flex-direction: column;
@@ -163,7 +172,7 @@ body {
   padding: 2rem 0;
 }
 
-.part_info{
+.part_info2 {
   display: flex;
   justify-content: center;
   row-gap: 3rem;
@@ -171,10 +180,22 @@ body {
   padding: 2rem;
 }
 
-.part_border2{
+.part_info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.part_border2 {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
+}
+
+@media screen and (min-width: 767px) {
+  .page_flag {
+    width: 26%;
+    left: 286px;
+  }
 }
 
 @media screen and (min-width: 1023px) {
@@ -182,18 +203,38 @@ body {
     height: 40vh;
   }
 
-  .main_page{
-    width: 65%;
-    margin: 0 auto;
+  .main_page {
+    width: 60%;
+    margin: 0 18rem;
+  }
+
+  .page_flag {
+    top: -2rem;
+    width: 50%;
+    left: 160px;
+  }
+
+  .part_info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .part_info {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .main_page {
+    margin: -31rem 25rem;
   }
 
   .page_flag{
-    width: 30%;
-    left: 240px;
+    width: 40%;
+    left: 260px;
   }
 
-  .part_info{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+  .page_names {
+    margin-top: -15rem;
   }
 }
